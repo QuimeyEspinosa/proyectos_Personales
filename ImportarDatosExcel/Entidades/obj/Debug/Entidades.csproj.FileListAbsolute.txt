@@ -1,0 +1,11 @@
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\bin\Debug\Entidades.dll
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\obj\Debug\Entidades.dll
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\bin\Debug\SpreadsheetLight.dll
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\bin\Debug\SpreadsheetLight.xml
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\bin\Debug\System.IO.Packaging.dll
+C:\Users\Quimey\source\repos\ImportarDatosExcel\Entidades\bin\Debug\System.IO.Packaging.xml

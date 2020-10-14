@@ -1,0 +1,1 @@
+1-El margen de ganancia de HMG es un calculo realizado con celdas protegidas, por lo tanto no se puede acceder al valor del resultado
