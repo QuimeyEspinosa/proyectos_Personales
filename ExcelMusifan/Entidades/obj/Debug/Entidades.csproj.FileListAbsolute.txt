@@ -1,0 +1,6 @@
+C:\Users\Quimey\source\repos\ExcelMusifan\Entidades\bin\Debug\Entidades.dll
+C:\Users\Quimey\source\repos\ExcelMusifan\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Quimey\source\repos\ExcelMusifan\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Quimey\source\repos\ExcelMusifan\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Quimey\source\repos\ExcelMusifan\Entidades\obj\Debug\Entidades.dll
+C:\Users\Quimey\source\repos\ExcelMusifan\Entidades\obj\Debug\Entidades.pdb
