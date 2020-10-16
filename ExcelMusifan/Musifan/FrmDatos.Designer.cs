@@ -66,10 +66,10 @@
             this.dgv_Productos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Productos.EnableHeadersVisualStyles = false;
             this.dgv_Productos.GridColor = System.Drawing.Color.Crimson;
-            this.dgv_Productos.Location = new System.Drawing.Point(12, 41);
+            this.dgv_Productos.Location = new System.Drawing.Point(12, 12);
             this.dgv_Productos.Name = "dgv_Productos";
             this.dgv_Productos.RowHeadersVisible = false;
-            this.dgv_Productos.Size = new System.Drawing.Size(911, 375);
+            this.dgv_Productos.Size = new System.Drawing.Size(911, 404);
             this.dgv_Productos.TabIndex = 1;
             // 
             // FrmDatos
