@@ -49,12 +49,14 @@
             // 
             // panel_Opciones
             // 
+            this.panel_Opciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_Opciones.BackColor = System.Drawing.Color.Transparent;
             this.panel_Opciones.Controls.Add(this.btn_CargarExcel);
             this.panel_Opciones.Controls.Add(this.pb_Musifan);
             this.panel_Opciones.Location = new System.Drawing.Point(12, 12);
             this.panel_Opciones.Name = "panel_Opciones";
-            this.panel_Opciones.Size = new System.Drawing.Size(192, 452);
+            this.panel_Opciones.Size = new System.Drawing.Size(192, 428);
             this.panel_Opciones.TabIndex = 1;
             // 
             // btn_CargarExcel
@@ -68,6 +70,7 @@
             this.btn_CargarExcel.TabIndex = 1;
             this.btn_CargarExcel.Text = "Cargar";
             this.btn_CargarExcel.UseVisualStyleBackColor = false;
+            this.btn_CargarExcel.Click += new System.EventHandler(this.btn_CargarExcel_Click);
             // 
             // panel_Forms
             // 
@@ -77,7 +80,7 @@
             this.panel_Forms.BackColor = System.Drawing.Color.Black;
             this.panel_Forms.Location = new System.Drawing.Point(221, 12);
             this.panel_Forms.Name = "panel_Forms";
-            this.panel_Forms.Size = new System.Drawing.Size(587, 452);
+            this.panel_Forms.Size = new System.Drawing.Size(935, 428);
             this.panel_Forms.TabIndex = 2;
             // 
             // FrmPrincipal
@@ -85,7 +88,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.ClientSize = new System.Drawing.Size(820, 476);
+            this.ClientSize = new System.Drawing.Size(1168, 452);
             this.Controls.Add(this.panel_Forms);
             this.Controls.Add(this.panel_Opciones);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

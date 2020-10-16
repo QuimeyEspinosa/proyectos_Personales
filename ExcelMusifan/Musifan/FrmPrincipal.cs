@@ -38,5 +38,9 @@ namespace Musifan
             miPanel.Tag = miForm;
         }
 
+        private void btn_CargarExcel_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

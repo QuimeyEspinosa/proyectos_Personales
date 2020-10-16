@@ -15,7 +15,6 @@ namespace Musifan
 {
     public partial class FrmDatos : Form
     {
-        List<Producto> misProductos = new List<Producto>();
         SLDocument slIntermusica;
         string pathIntermusica = Application.StartupPath + "\\excels\\Lista_Intermusica.xlsx";
 
@@ -27,42 +26,121 @@ namespace Musifan
         private void FrmDatos_Load(object sender, EventArgs e)
         {
             slIntermusica = new SLDocument(pathIntermusica);
+
             cargarProductos();
-            dgv_Productos.DataSource = misProductos;
+
+            dgv_Productos.DataSource = Comercio.MisProductos;
         }
 
         private void cargarProductos()
         {
-            cargarProductosIntermusica("Lista Importado", "Importado");
-            cargarProductosIntermusica("Lista Nacional", "Nacional");
-            cargarProductosIntermusica("Lista Sub Distribucion", "Sub Distribucion");
+            cargarProductosIntermusica();
         }
 
-
-        private void cargarProductosIntermusica(string hoja, string origen)
+        private void cargarProductosIntermusica()
         {
-            Producto nuevoProd = new Producto("Intermusica");
-            int fila = 10;
+            Producto nuevoProd;
+            string auxIva;
+            string auxMargenGanancia;
+            int fila;
 
-            slIntermusica.SelectWorksheet(hoja);
+            fila = 10;
+            slIntermusica.SelectWorksheet("Lista Nacional");
             while (!string.IsNullOrEmpty(slIntermusica.GetCellValueAsString(fila, 1)))
             {
+                nuevoProd = new Producto("Intermusica");
                 nuevoProd.NumeroArticulo = slIntermusica.GetCellValueAsString(fila, 1);
                 nuevoProd.Marca = slIntermusica.GetCellValueAsString(fila, 2);
                 nuevoProd.Rubro = slIntermusica.GetCellValueAsString(fila, 3);
                 nuevoProd.Descripcion = slIntermusica.GetCellValueAsString(fila, 4);
-                nuevoProd.PrecioVentaClienteUSD = slIntermusica.GetCellValueAsString(fila, 5);
-                nuevoProd.PrecioVentaCliente = slIntermusica.GetCellValueAsString(fila, 6);
-                nuevoProd.Iva = slIntermusica.GetCellValueAsString(fila, 7);
-                nuevoProd.MargenGanancia = slIntermusica.GetCellValueAsString(fila, 8);
-                nuevoProd.PrecioVentaPublicoUSD = slIntermusica.GetCellValueAsString(fila, 9);
-                nuevoProd.PrecioVentaPublico = slIntermusica.GetCellValueAsString(fila, 10);
-                nuevoProd.OrigenProducto = origen;
+                nuevoProd.PrecioVentaCliente = "$ " + slIntermusica.GetCellValueAsDouble(fila, 5).ToString();
 
-                misProductos.Add(nuevoProd);
+                auxIva = slIntermusica.GetCellValueAsDouble(fila, 6).ToString();
+                nuevoProd.Iva = ConvertIva(auxIva);
+
+                auxMargenGanancia = slIntermusica.GetCellValueAsDouble(fila, 7).ToString();
+                nuevoProd.MargenGanancia = ConvertMargen(auxMargenGanancia);
+
+                nuevoProd.PrecioVentaPublico = "$ " + slIntermusica.GetCellValueAsDouble(fila, 8).ToString();
+                nuevoProd.OrigenProducto = "Nacional";
+
+                
+
+                Comercio.AgregarProducto(nuevoProd);
                 fila++;
             }
 
+            fila = 10;
+            slIntermusica.SelectWorksheet("Lista Importado");
+            while (!string.IsNullOrEmpty(slIntermusica.GetCellValueAsString(fila, 1)))
+            {
+                nuevoProd = new Producto("Intermusica");
+                nuevoProd.NumeroArticulo = slIntermusica.GetCellValueAsString(fila, 1);
+                nuevoProd.Marca = slIntermusica.GetCellValueAsString(fila, 2);
+                nuevoProd.Rubro = slIntermusica.GetCellValueAsString(fila, 3);
+                nuevoProd.Descripcion = slIntermusica.GetCellValueAsString(fila, 4);
+
+                nuevoProd.PrecioVentaClienteUSD = "us$ " + slIntermusica.GetCellValueAsDouble(fila, 5).ToString();
+                nuevoProd.PrecioVentaCliente = "$ " + slIntermusica.GetCellValueAsDouble(fila, 6).ToString();
+
+                auxIva = slIntermusica.GetCellValueAsDouble(fila, 7).ToString();
+                nuevoProd.Iva = ConvertIva(auxIva);
+
+                auxMargenGanancia = slIntermusica.GetCellValueAsDouble(fila, 8).ToString();
+                nuevoProd.MargenGanancia = ConvertMargen(auxMargenGanancia);
+
+                nuevoProd.PrecioVentaPublicoUSD = "us$ " + slIntermusica.GetCellValueAsDouble(fila, 9).ToString();
+                nuevoProd.PrecioVentaPublico = "$ " + slIntermusica.GetCellValueAsDouble(fila, 10).ToString();
+                nuevoProd.OrigenProducto = "Importado";
+
+                Comercio.AgregarProducto(nuevoProd);
+                fila++;
+            }
+        }
+
+
+
+        private string ConvertMargen(string margenGanancia)
+        {
+            if (margenGanancia == "0,4")
+            {
+                margenGanancia = "40%";
+            }
+            else if (margenGanancia == "0,43")
+            {
+                margenGanancia = "43%";
+            }
+            else if (margenGanancia == "0,6")
+            {
+                margenGanancia = "60%";
+            }
+            else if (margenGanancia == "0,55")
+            {
+                margenGanancia = "55%";
+            }
+            else if (margenGanancia == "0,3")
+            {
+                margenGanancia = "30%";
+            }
+            else if (margenGanancia == "0,35")
+            {
+                margenGanancia = "35%";
+            }
+
+            return margenGanancia;
+        }
+        private string ConvertIva(string iva)
+        {
+            if (iva == "0,105")
+            {
+                iva = "10,5%";
+            }
+            else if (iva == "0,21")
+            {
+                iva = "21%";
+            }
+
+            return iva;
         }
     }
 }
