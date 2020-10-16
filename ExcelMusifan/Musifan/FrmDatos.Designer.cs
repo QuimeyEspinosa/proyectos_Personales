@@ -69,7 +69,7 @@
             this.dgv_Productos.Location = new System.Drawing.Point(12, 41);
             this.dgv_Productos.Name = "dgv_Productos";
             this.dgv_Productos.RowHeadersVisible = false;
-            this.dgv_Productos.Size = new System.Drawing.Size(574, 399);
+            this.dgv_Productos.Size = new System.Drawing.Size(911, 375);
             this.dgv_Productos.TabIndex = 1;
             // 
             // FrmDatos
@@ -77,7 +77,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(598, 452);
+            this.ClientSize = new System.Drawing.Size(935, 428);
             this.Controls.Add(this.dgv_Productos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

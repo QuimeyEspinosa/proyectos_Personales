@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,7 +25,22 @@ namespace Entidades
 
         public string Proveedor { get => proveedor; set => proveedor = value; }
         public string NumeroArticulo { get => numeroArticulo; set => numeroArticulo = value; }
-        public string Rubro { get => rubro; set => rubro = value; }
+        public string Rubro
+        {
+            get { return this.rubro; }
+
+            set
+            {
+                if (!(string.IsNullOrEmpty(value)))
+                {
+                    this.rubro = value;
+                }
+                else
+                {
+                    this.rubro = "Sin asignar";
+                }
+            }
+        }
         public string Marca { get => marca; set => marca = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Stock { get => stock; set => stock = value; }
@@ -41,9 +57,9 @@ namespace Entidades
             this.NumeroArticulo = "Sin asignar";
             this.Rubro = "Sin asignar";
             this.Marca = "Sin asignar";
-            this.Stock = "Sin asignar";
+            this.Stock = "N/A";
             this.Iva = "Sin asignar";
-            this.MargenGanancia = "Sin asignar";
+            this.MargenGanancia = "N/A";
             this.PrecioVentaCliente = "Sin asignar";
             this.PrecioVentaPublico = "Sin asignar";
             this.OrigenProducto = "Sin asignar";

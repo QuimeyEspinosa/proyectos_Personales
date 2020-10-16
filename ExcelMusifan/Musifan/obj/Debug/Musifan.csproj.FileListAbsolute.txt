@@ -32,3 +32,4 @@ C:\Users\Quimey\source\repos\proyectos_Personales\ExcelMusifan\Musifan\obj\Debug
 C:\Users\Quimey\source\repos\proyectos_Personales\ExcelMusifan\Musifan\obj\Debug\Musifan.csproj.CopyComplete
 C:\Users\Quimey\source\repos\proyectos_Personales\ExcelMusifan\Musifan\obj\Debug\Musifan.exe
 C:\Users\Quimey\source\repos\proyectos_Personales\ExcelMusifan\Musifan\obj\Debug\Musifan.pdb
+C:\Users\Quimey\source\repos\proyectos_Personales\ExcelMusifan\Musifan\obj\Debug\Musifan.FrmCarga.resources

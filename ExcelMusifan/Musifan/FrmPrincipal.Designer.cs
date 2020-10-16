@@ -33,6 +33,7 @@
             this.panel_Opciones = new System.Windows.Forms.Panel();
             this.btn_CargarExcel = new System.Windows.Forms.Button();
             this.panel_Forms = new System.Windows.Forms.Panel();
+            this.btn_CrearExcelMusifan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Musifan)).BeginInit();
             this.panel_Opciones.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             this.panel_Opciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_Opciones.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Opciones.Controls.Add(this.btn_CrearExcelMusifan);
             this.panel_Opciones.Controls.Add(this.btn_CargarExcel);
             this.panel_Opciones.Controls.Add(this.pb_Musifan);
             this.panel_Opciones.Location = new System.Drawing.Point(12, 12);
@@ -68,7 +70,7 @@
             this.btn_CargarExcel.Name = "btn_CargarExcel";
             this.btn_CargarExcel.Size = new System.Drawing.Size(186, 30);
             this.btn_CargarExcel.TabIndex = 1;
-            this.btn_CargarExcel.Text = "Cargar";
+            this.btn_CargarExcel.Text = "Cargar datos";
             this.btn_CargarExcel.UseVisualStyleBackColor = false;
             this.btn_CargarExcel.Click += new System.EventHandler(this.btn_CargarExcel_Click);
             // 
@@ -82,6 +84,19 @@
             this.panel_Forms.Name = "panel_Forms";
             this.panel_Forms.Size = new System.Drawing.Size(935, 428);
             this.panel_Forms.TabIndex = 2;
+            // 
+            // btn_CrearExcelMusifan
+            // 
+            this.btn_CrearExcelMusifan.BackColor = System.Drawing.Color.Crimson;
+            this.btn_CrearExcelMusifan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_CrearExcelMusifan.ForeColor = System.Drawing.Color.White;
+            this.btn_CrearExcelMusifan.Location = new System.Drawing.Point(3, 106);
+            this.btn_CrearExcelMusifan.Name = "btn_CrearExcelMusifan";
+            this.btn_CrearExcelMusifan.Size = new System.Drawing.Size(186, 30);
+            this.btn_CrearExcelMusifan.TabIndex = 2;
+            this.btn_CrearExcelMusifan.Text = "Crear Excel Musifan";
+            this.btn_CrearExcelMusifan.UseVisualStyleBackColor = false;
+            this.btn_CrearExcelMusifan.Click += new System.EventHandler(this.btn_CrearExcelMusifan_Click);
             // 
             // FrmPrincipal
             // 
@@ -110,5 +125,6 @@
         private System.Windows.Forms.Panel panel_Opciones;
         private System.Windows.Forms.Panel panel_Forms;
         private System.Windows.Forms.Button btn_CargarExcel;
+        private System.Windows.Forms.Button btn_CrearExcelMusifan;
     }
 }
