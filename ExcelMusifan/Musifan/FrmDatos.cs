@@ -18,9 +18,13 @@ namespace Musifan
         SLDocument slMartcar;
         SLDocument slIntermusica;
         SLDocument slHmg;
+        SLDocument slMartinBlust;
+        SLDocument slChromos;
         string pathMartcar = Application.StartupPath + "\\excels\\Lista_Martcar.xlsx";
         string pathIntermusica = Application.StartupPath + "\\excels\\Lista_Intermusica.xlsx";
         string pathHmg = Application.StartupPath + "\\excels\\Lista_Hmg.xlsx";
+        string pathMartinBlust = Application.StartupPath + "\\excels\\Lista_MartinBlust.xlsx";
+        string pathChromos = Application.StartupPath + "\\excels\\Lista_Chromos.xlsx";
 
         public FrmDatos()
         {
@@ -32,6 +36,8 @@ namespace Musifan
             slIntermusica = new SLDocument(pathIntermusica);
             slMartcar = new SLDocument(pathMartcar);
             slHmg = new SLDocument(pathHmg);
+            slMartinBlust = new SLDocument(pathMartinBlust);
+            slChromos = new SLDocument(pathChromos);
 
             if (cargarProductos())
             {
@@ -47,6 +53,7 @@ namespace Musifan
         private bool cargarProductos()
         {
             bool pudoCargar = false;
+
 
             if (cargarProductosMartcar())
             {
@@ -79,6 +86,30 @@ namespace Musifan
             else
             {
                 MessageBox.Show("No pudo cargarse los datos de Hmg",
+                                            "Carga de datos",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Error);
+            }
+
+            if (cargarProductosMartinBlust())
+            {
+                pudoCargar = true;
+            }
+            else
+            {
+                MessageBox.Show("No pudo cargarse los datos de Martin Blust",
+                                            "Carga de datos",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Error);
+            }
+
+            if (cargarProductosChromos())
+            {
+                pudoCargar = true;
+            }
+            else
+            {
+                MessageBox.Show("No pudo cargarse los datos de Chromos",
                                             "Carga de datos",
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Error);
@@ -234,8 +265,413 @@ namespace Musifan
 
             return pudoCargar;
         }
+        private bool cargarProductosMartinBlust()
+        {
+            bool pudoCargar = false;
+            Producto nuevoProdMartinBlust;
+            int primerFila;
+            int ultimaFila = 110;
+            string auxNumArticulo;
+
+            primerFila = 14;
+            slMartinBlust.SelectWorksheet("CLÁSICA");
+
+            while (primerFila < ultimaFila)
+            {
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))) &&
+                   !(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 7))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "CLÁSICA";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
 
 
+            primerFila = 12;
+            slMartinBlust.SelectWorksheet("ELÉCTRICA");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))) &&
+                   !(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 7))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "ELÉCTRICA";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+            primerFila = 9;
+            slMartinBlust.SelectWorksheet("BAJO ELÉCTRICO");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))) &&
+                   !(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 7))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "BAJO ELÉCTRICO";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+            primerFila = 14;
+            slMartinBlust.SelectWorksheet("BLACK SOUL");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))) &&
+                   !(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 7))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "BLACK SOUL";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+            primerFila = 9;
+            slMartinBlust.SelectWorksheet("ACÚSTICA 8020");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))) &&
+                   !(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 7))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "ACÚSTICA 8020";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+            primerFila = 10;
+            slMartinBlust.SelectWorksheet("BAJO ACÚSTICO 8020");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))) &&
+                   !(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 7))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "BAJO ACÚSTICO 8020";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+            primerFila = 10;
+            slMartinBlust.SelectWorksheet(" ACÚSTICA 8515");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "ACÚSTICA 8515";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+            primerFila = 9;
+            slMartinBlust.SelectWorksheet("LATINO");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "LATINO";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+
+            primerFila = 9;
+            slMartinBlust.SelectWorksheet("INTERNACIONAL");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "INTERNACIONAL";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 7).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+            primerFila = 6;
+            slMartinBlust.SelectWorksheet("ACCESORIOS");
+            while (primerFila < ultimaFila)
+            {
+                if (slMartinBlust.GetCellValueAsString(primerFila, 1) == "CÓDIGO")
+                {
+                    primerFila++;
+                }
+                if (!(string.IsNullOrEmpty(slMartinBlust.GetCellValueAsString(primerFila, 1))))
+                {
+                    nuevoProdMartinBlust = new Producto();
+
+                    nuevoProdMartinBlust.Proveedor = "Martin Blust";
+                    auxNumArticulo = slMartinBlust.GetCellValueAsString(primerFila, 1);
+                    nuevoProdMartinBlust.NumeroArticulo = RemoveCharsBeforeString(auxNumArticulo);
+                    nuevoProdMartinBlust.Rubro = "ACCESORIOS";
+
+                    nuevoProdMartinBlust.Marca = "Martin Blust";
+                    nuevoProdMartinBlust.Descripcion = slMartinBlust.GetCellValueAsString(primerFila, 2);
+                    nuevoProdMartinBlust.PrecioVentaCliente = "$ " + slMartinBlust.GetCellValueAsDouble(primerFila, 8).ToString();
+
+                    Comercio.AgregarProducto(nuevoProdMartinBlust);
+
+                    primerFila++;
+                    pudoCargar = true;
+                }
+                else
+                {
+                    primerFila++;
+                }
+            }
+
+            return pudoCargar;
+        }
+        private bool cargarProductosChromos()
+        {
+            bool pudoCargar = false;
+            Producto nuevoProdChromos;
+            int primerFila = 9;
+            int ultimaFila = 200;
+
+            while (primerFila < ultimaFila)
+            {
+                if (slChromos.GetCellValueAsString(primerFila, 2) == "COD ARTICULO")
+                {
+                    primerFila++;
+                }
+                else
+                {
+                    if (!(string.IsNullOrEmpty(slChromos.GetCellValueAsString(primerFila, 2))) &&
+                       !(string.IsNullOrEmpty(slChromos.GetCellValueAsString(primerFila, 4))))
+                    {
+                        nuevoProdChromos = new Producto();
+
+                        nuevoProdChromos.Proveedor = "Chromos";
+                        nuevoProdChromos.NumeroArticulo = slChromos.GetCellValueAsString(primerFila, 2);
+                        nuevoProdChromos.Descripcion = slChromos.GetCellValueAsString(primerFila, 3);
+                        nuevoProdChromos.PrecioVentaCliente = "$ " + slChromos.GetCellValueAsDouble(primerFila, 4).ToString();
+
+                        if (primerFila < 89)
+                        {
+                            nuevoProdChromos.Stock = slChromos.GetCellValueAsString(primerFila, 6);
+                            nuevoProdChromos.Observacion = slChromos.GetCellValueAsString(primerFila, 5);
+                            nuevoProdChromos.PrecioVentaPublico = "$ " + slChromos.GetCellValueAsDouble(primerFila, 7).ToString();
+                        }
+                        else
+                        {
+                            nuevoProdChromos.Stock = "N/A";
+                            nuevoProdChromos.Observacion = slChromos.GetCellValueAsString(primerFila, 6);
+                            nuevoProdChromos.PrecioVentaPublico = slChromos.GetCellValueAsString(primerFila, 5);
+                        }
+
+                        Comercio.AgregarProducto(nuevoProdChromos);
+
+                        primerFila++;
+                        pudoCargar = true;
+                    }
+                    else
+                    {
+                        primerFila++;
+                    }
+
+
+                }
+            }
+
+            return pudoCargar;
+        }
+
+
+
+        private string RemoveCharsBeforeString(string auxString)
+        {
+            auxString.Trim();
+
+            for (int i = 0; i < auxString.Length; i++)
+            {
+                if (auxString[i].ToString() == " ")
+                {
+                    auxString = auxString.Remove(i);
+                }
+            }
+
+            return auxString;
+        }
         private string ConvertMargen(string margenGanancia)
         {
             if (margenGanancia == "0,4")

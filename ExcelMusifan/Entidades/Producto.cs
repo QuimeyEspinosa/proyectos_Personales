@@ -22,6 +22,7 @@ namespace Entidades
         string precioVentaClienteUSD;
         string precioVentaPublicoUSD;
         string origenProducto;
+        string observacion;
 
         public string Proveedor { get => proveedor; set => proveedor = value; }
         public string NumeroArticulo { get => numeroArticulo; set => numeroArticulo = value; }
@@ -42,7 +43,22 @@ namespace Entidades
             }
         }
         public string Marca { get => marca; set => marca = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string Descripcion
+        {
+            get { return this.descripcion; }
+
+            set
+            {
+                if (!(string.IsNullOrEmpty(value)))
+                {
+                    this.descripcion = value;
+                }
+                else
+                {
+                    this.descripcion = "Sin asignar";
+                }
+            }
+        }
         public string Stock { get => stock; set => stock = value; }
         public string Iva { get => iva; set => iva = value; }
         public string MargenGanancia { get => margenGanancia; set => margenGanancia = value; }
@@ -51,6 +67,7 @@ namespace Entidades
         public string PrecioVentaClienteUSD { get => precioVentaClienteUSD; set => precioVentaClienteUSD = value; }
         public string PrecioVentaPublicoUSD { get => precioVentaPublicoUSD; set => precioVentaPublicoUSD = value; }
         public string OrigenProducto { get => origenProducto; set => origenProducto = value; }
+        public string Observacion { get => observacion; set => observacion = value; }
 
         public Producto()
         {
@@ -65,6 +82,7 @@ namespace Entidades
             this.OrigenProducto = "Sin asignar";
             this.PrecioVentaClienteUSD = "N/A";
             this.PrecioVentaPublicoUSD = "N/A";
+            this.Observacion = "N/A";
         }
 
         public Producto(string proveedor) : this()
@@ -84,7 +102,8 @@ namespace Entidades
                         string margenGanancia,
                         string origenProducto,
                         string pVentaClienteUSD,
-                        string pVentaPublicoUSD) : this(proveedor)
+                        string pVentaPublicoUSD,
+                        string observacion) : this(proveedor)
         {
             this.NumeroArticulo = numeroArticulo;
             this.Descripcion = descripcion;
@@ -98,6 +117,7 @@ namespace Entidades
             this.OrigenProducto = origenProducto;
             this.PrecioVentaClienteUSD = pVentaClienteUSD;
             this.PrecioVentaPublicoUSD = pVentaPublicoUSD;
+            this.Observacion = observacion;
         }
     }
 }
