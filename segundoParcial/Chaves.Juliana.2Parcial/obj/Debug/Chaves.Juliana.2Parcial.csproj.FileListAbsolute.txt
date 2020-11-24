@@ -1,0 +1,32 @@
+C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csprojAssemblyReference.cache
+C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana._2Parcial.FrmPrincipal.resources
+C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana._2Parcial.Properties.Resources.resources
+C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.GenerateResource.cache
+C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.CoreCompileInputs.cache
+C:\Users\chave\Source\Repositorios\2PARCIAL\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csprojAssemblyReference.cache
+C:\Users\chave\Source\Repositorios\2PARCIAL\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana._2Parcial.FrmPrincipal.resources
+C:\Users\chave\Source\Repositorios\2PARCIAL\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana._2Parcial.Properties.Resources.resources
+C:\Users\chave\Source\Repositorios\2PARCIAL\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.GenerateResource.cache
+C:\Users\chave\Source\Repositorios\2PARCIAL\SEGUNDO PARCIAL TODO\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.CoreCompileInputs.cache
+C:\Users\chave\Source\Repositorios\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csprojAssemblyReference.cache
+C:\Users\chave\Source\Repositorios\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana._2Parcial.FrmPrincipal.resources
+C:\Users\chave\Source\Repositorios\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana._2Parcial.Properties.Resources.resources
+C:\Users\chave\Source\Repositorios\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.GenerateResource.cache
+C:\Users\chave\Source\Repositorios\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.CoreCompileInputs.cache
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csprojAssemblyReference.cache
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana._2Parcial.FrmPrincipal.resources
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana._2Parcial.Properties.Resources.resources
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.GenerateResource.cache
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.CoreCompileInputs.cache
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Chaves.Juliana.2Parcial.exe.config
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Chaves.Juliana.2Parcial.exe
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Chaves.Juliana.2Parcial.pdb
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Archivos.dll
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Entidades.dll
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Excepciones.dll
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Archivos.pdb
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Entidades.pdb
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\bin\Debug\Excepciones.pdb
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.csproj.CopyComplete
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.exe
+C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\Chaves.Juliana.2Parcial\obj\Debug\Chaves.Juliana.2Parcial.pdb

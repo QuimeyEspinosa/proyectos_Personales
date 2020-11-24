@@ -1,0 +1,4 @@
+C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\TestUnitario\obj\Debug\TestUnitario.csprojAssemblyReference.cache
+C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\TestUnitario\obj\Debug\TestUnitario.csproj.CoreCompileInputs.cache
+C:\Users\chave\Source\Repositorios\segundoParcial\TestUnitario\obj\Debug\TestUnitario.csprojAssemblyReference.cache
+C:\Users\chave\Source\Repositorios\segundoParcial\TestUnitario\obj\Debug\TestUnitario.csproj.CoreCompileInputs.cache
