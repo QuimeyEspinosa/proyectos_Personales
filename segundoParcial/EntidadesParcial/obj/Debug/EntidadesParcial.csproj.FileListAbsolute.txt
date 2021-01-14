@@ -1,8 +1,0 @@
-C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\EntidadesParcial\obj\Debug\EntidadesParcial.csprojAssemblyReference.cache
-C:\Users\chave\Source\Repositorios\SEGUNDO PARCIAL TODO\EntidadesParcial\obj\Debug\EntidadesParcial.csproj.CoreCompileInputs.cache
-C:\Users\chave\Source\Repositorios\2PARCIAL\SEGUNDO PARCIAL TODO\EntidadesParcial\obj\Debug\EntidadesParcial.csprojAssemblyReference.cache
-C:\Users\chave\Source\Repositorios\2PARCIAL\SEGUNDO PARCIAL TODO\EntidadesParcial\obj\Debug\EntidadesParcial.csproj.CoreCompileInputs.cache
-C:\Users\chave\Source\Repositorios\segundoParcial\EntidadesParcial\obj\Debug\EntidadesParcial.csprojAssemblyReference.cache
-C:\Users\chave\Source\Repositorios\segundoParcial\EntidadesParcial\obj\Debug\EntidadesParcial.csproj.CoreCompileInputs.cache
-C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\EntidadesParcial\obj\Debug\EntidadesParcial.csprojAssemblyReference.cache
-C:\Users\Quimey\Desktop\Labo2.Parcial2\segundoParcial\EntidadesParcial\obj\Debug\EntidadesParcial.csproj.CoreCompileInputs.cache
